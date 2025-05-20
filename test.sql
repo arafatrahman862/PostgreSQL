@@ -572,3 +572,21 @@ select * FROM students where first_name like '%am';
 where first_name like 'a';
 -- ilike is not case sensitive
 select * FROM students where first_name ilike 'a%';
+
+select * FROM students
+
+select * FROM students LIMIT 5; 
+
+select * FROM students LIMIT 5 OFFSET 2;
+
+-- Pagination
+
+select * FROM students LIMIT 5 OFFSET 5 * 0; -- page 1
+select * FROM students LIMIT 5 OFFSET 5 * 1; -- page 2  
+select * FROM students LIMIT 5 OFFSET 5 * 2; -- page 3  
+select * FROM students LIMIT 5 OFFSET 5 * 3; -- page 4  
+
+-- Delete
+
+DELETE FROM students 
+    WHERE grade = 'C' AND country = 'USA';
